@@ -36,7 +36,11 @@ const source = asyncRedis.createClient({
   }
 });
 const destination = asyncRedis.createClient({
-  url: options.to
+  url: options.to,
+  return_buffers: true,
+  tls: {
+    rejectUnauthorized: false
+  }
 })
 
 const imported = new Set();
