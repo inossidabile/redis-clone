@@ -1,0 +1,19 @@
+{
+  "name": "redis-clone",
+  "version": "1.0.0",
+  "description": "A simple script to copy keys directly between two Redis instances",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "redis-clone": "./bin//redis-clone"
+  },
+  "author": "Borir Staal <boris@staal.io>",
+  "license": "MIT",
+  "dependencies": {
+    "async-redis": "^2.0.0",
+    "command-line-args": "^5.2.0",
+    "command-line-usage": "^6.1.1"
+  }
+}
