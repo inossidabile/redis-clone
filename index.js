@@ -30,6 +30,7 @@ if (options.help || !options.from || !options.to) {
 
 const source = asyncRedis.createClient({
   url: options.from,
+  readonly: true,
   return_buffers: true,
   tls: {
     rejectUnauthorized: false
@@ -37,7 +38,6 @@ const source = asyncRedis.createClient({
 });
 const destination = asyncRedis.createClient({
   url: options.to,
-  return_buffers: true,
   tls: {
     rejectUnauthorized: false
   }
